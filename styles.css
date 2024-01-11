@@ -8,12 +8,12 @@
 }
 
 body {
-	background: #f5f6f8;
+	background: #fff;
 	-webkit-font-smoothing: antialiased;
 }
 
 .header-menu {
-	background: #e8e9ec;
+	background: #f9f9f9;
 	width: 100%;
 	max-height: 64px;
 	display: flex;
@@ -37,7 +37,9 @@ body {
 .menu li {
 	position: relative;
 	cursor: pointer;
-	list-style: none !important;
+	list-style: none;
+	background: #f4f4f4;
+	border-radius: 3px;
 }
 
 .menu li a {
