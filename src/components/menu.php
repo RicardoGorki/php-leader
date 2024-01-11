@@ -7,15 +7,17 @@
 </head>
 <body>
 <header class="header-menu">
+	<a href="index.php">
 		<img id="header-logo" src="src/assets/php-elephant.svg" alt="php">
+	</a>
 		<nav>
 			<ul class="menu">
 				<li><a>Colaborador</a>
 					<ul>
-						<li><a href="#">Cadastrar</a></li>
-						<li><a href="#">Listar</a></li>
-						<li><a href="#">Atualizar</a></li>
-						<li><a href="#">Deleter</a></li>
+						<li><a href="register-users.php">Cadastrar</a></li>
+						<li><a href="list-users.php">Listar</a></li>
+						<li><a href="update-users.php">Atualizar</a></li>
+						<li><a href="delete-users.php">Deleter</a></li>
 					</ul>
 				</li>
 			</ul>
