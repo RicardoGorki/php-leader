@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="src/styles/styles.css">
 </head>
-<body>
 <header class="header-menu">
 	<a href="index.php">
 		<img id="header-logo" src="src/assets/php-elephant.svg" alt="php">
@@ -23,5 +22,5 @@
 			</ul>
 		</nav>
 	</header>
-</body>
+
 </html>

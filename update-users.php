@@ -7,7 +7,9 @@
 </head>
 <body>
 	<div>
-		<?php include 'src/components/menu.php';?>
+	<?php include 'src/components/header.php';
+			include 'src/components/footer.php';
+			?>
 	</div>
 	<section>
 

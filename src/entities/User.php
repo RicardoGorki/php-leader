@@ -1,5 +1,7 @@
 <?php
 
+require_once "src/database/dbconnect.php";
+require_once "src/services/users.php";
 class User
 {
 	private string $_id;
@@ -19,18 +21,18 @@ class User
 		$this->_birthDay = $birthDay;
 	}
 
-	public function createUser($id, $name, $lastName, $email, $phone, $birthDay){
+	public function createUser($id, $name, $lastName, $email, $phone, $birthDay)
+	{
 
 		$conn = new mysqli("localhost", "leader", "root", "leader");
 
 		if (!$conn) {
-		die("Connection failed: " . mysqli_error($conn));
+			die("Connection failed: " . mysqli_error($conn));
 		}
 		$sql = $conn->query("INSERT INTO users(id, name, last_name, email, phone_numbers, birth_day) VALUES('$id', '$name', '$lastName', '$email', '$phone', '$birthDay')");
 		return $sql;
-
 	}
-	public function getId(): string
+		public function getId(): string
 	{
 		return $this->_id;
 	}

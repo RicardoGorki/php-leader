@@ -9,7 +9,9 @@
 
 <body>
 	<div>
-		<?php include 'src/components/menu.php'; ?>
+	<?php include 'src/components/header.php';
+			include 'src/components/footer.php';
+			?>
 	</div>
 	<section class="container">
 		<form action="action-register-users.php" method="POST">
@@ -31,6 +33,7 @@
 			<input type="submit" value="Cadastrar">
 		</form>
 	</section>
+
 </body>
 
 </html>
