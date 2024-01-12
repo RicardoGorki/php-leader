@@ -1,5 +1,5 @@
 <?php
-include "src/lib/myDb.php";
+
 class User
 {
 	private string $_id;
@@ -20,15 +20,11 @@ class User
 	}
 
 	public function createUser($id, $name, $lastName, $email, $phone, $birthDay){
-		$servername = "localhost";
-		$database = "leader";
-		$username = "leader";
-		$password = "root";
 
-		$conn = mysqli_connect($servername, $username, $password, $database);
+		$conn = new mysqli("localhost", "leader", "root", "leader");
 
 		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
+		die("Connection failed: " . mysqli_error($conn));
 		}
 		$sql = $conn->query("INSERT INTO users(id, name, last_name, email, phone_numbers, birth_day) VALUES('$id', '$name', '$lastName', '$email', '$phone', '$birthDay')");
 		return $sql;

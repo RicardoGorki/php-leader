@@ -5,10 +5,10 @@ $database = "leader";
 $username = "leader";
 $password = "root";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $database);
 
 if (!$conn) {
-die("Connection failed: " . mysqli_connect_error());
+die("Connection failed: " . mysqli_error($conn));
 }
 echo "Connected successfully";
 
