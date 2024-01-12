@@ -12,13 +12,6 @@ function readUserAction($conn)
 	return readUserDb($conn);
 }
 
-function createUserAction($conn, $name, $email, $phone)
-{
-	$createUserDb = createUserDb($conn, $name, $email, $phone);
-	$message = $createUserDb == 1 ? 'success-create' : 'error-create';
-	return header("Location: ./index.php?message=$message");
-}
-
 function updateUserAction($conn, $id, $name, $email, $phone)
 {
 	$updateUserDb = updateUserDb($conn, $id, $name, $email, $phone);
@@ -30,5 +23,5 @@ function deleteUserAction($conn, $id)
 {
 	$deleteUserDb = deleteUserDb($conn, $id);
 	$message = $deleteUserDb == 1 ? 'success-remove' : 'error-remove';
-	return header("Location: ./index.php?message=$message");
+	return header("Location: ./list-users.php?message=$message");
 }
