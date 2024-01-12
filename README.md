@@ -5,7 +5,7 @@ https://www.php.net/manual/pt_BR/langref.php
 
 
 MYSQL CONFIG
-sudo mysql<\br>
+sudo mysql<br>
 create database leader;
 grant all privileges on leader.* to leader@localhost identified by 'root';
 use leader;
