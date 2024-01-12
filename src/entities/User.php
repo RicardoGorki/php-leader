@@ -1,5 +1,5 @@
 <?php
-
+include "src/lib/myDb.php";
 class User
 {
 	private string $_id;
@@ -19,6 +19,21 @@ class User
 		$this->_birthDay = $birthDay;
 	}
 
+	public function createUser($id, $name, $lastName, $email, $phone, $birthDay){
+		$servername = "localhost";
+		$database = "leader";
+		$username = "leader";
+		$password = "root";
+
+		$conn = mysqli_connect($servername, $username, $password, $database);
+
+		if (!$conn) {
+			die("Connection failed: " . mysqli_connect_error());
+		}
+		$sql = $conn->query("INSERT INTO users(id, name, last_name, email, phone_numbers, birth_day) VALUES('$id', '$name', '$lastName', '$email', '$phone', '$birthDay')");
+		return $sql;
+
+	}
 	public function getId(): string
 	{
 		return $this->_id;
