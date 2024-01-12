@@ -9,11 +9,11 @@ class User
 	private string $_phone;
 	private string $_birthDay;
 
-	public function __construct(string $name, string $lastname, string $email, string $phone, string $birthDay)
+	public function __construct(string $name, string $lastName, string $email, string $phone, string $birthDay)
 	{
 		$this->_id = uniqid();
 		$this->_name = $name;
-		$this->_lastName = $lastname;
+		$this->_lastName = $lastName;
 		$this->_email = $email;
 		$this->_phone = $phone;
 		$this->_birthDay = $birthDay;
