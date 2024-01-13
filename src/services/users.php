@@ -16,7 +16,7 @@ function updateUserAction($conn, $id, $name, $lastName, $email, $phone, $birthDa
 {
 	$updateUserDb = updateUserDb($conn, $id, $name, $lastName, $email, $phone, $birthDay);
 	$message = $updateUserDb == 1 ? 'success-update' : 'error-update';
-	return header("Location: ./action-update-users.php?message=$message");
+	return header("Location: ./list-users.php?message=$message");
 }
 
 function deleteUserAction($conn, $id)
