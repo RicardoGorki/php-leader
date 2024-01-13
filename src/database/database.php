@@ -45,7 +45,7 @@ function updateUserDb($conn, $id, $name, $email, $phone)
 		if (!mysqli_stmt_prepare($stmt, $sql))
 			exit('SQL error');
 
-		mysqli_stmt_bind_param($stmt, 'sssi', $name, $email, $phone, $id);
+		mysqli_stmt_bind_param($stmt, 'ssss', $name, $email, $phone, $id);
 		mysqli_stmt_execute($stmt);
 		mysqli_close($conn);
 		return true;
