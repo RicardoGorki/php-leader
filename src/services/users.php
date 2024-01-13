@@ -12,9 +12,9 @@ function readUserAction($conn)
 	return readUserDb($conn);
 }
 
-function updateUserAction($conn, $id, $name, $email, $phone)
+function updateUserAction($conn, $id, $name, $lastName, $email, $phone, $birthDay)
 {
-	$updateUserDb = updateUserDb($conn, $id, $name, $email, $phone);
+	$updateUserDb = updateUserDb($conn, $id, $name, $lastName, $email, $phone, $birthDay);
 	$message = $updateUserDb == 1 ? 'success-update' : 'error-update';
 	return header("Location: ./index.php?message=$message");
 }
