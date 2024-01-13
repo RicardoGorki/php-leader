@@ -28,11 +28,11 @@ $users = readUserAction($conn);
                 <td class="user-email"><?= htmlspecialchars($row['email']) ?></td>
                 <td class="user-phone"><?= htmlspecialchars($row['phone_numbers']) ?></td>
                 <td class="user-birthDay"><?= date("d-m-Y", strtotime(htmlspecialchars($row['birth_day']))) ?></td>
-                <td>
-                    <a class="btn btn-primary text-white" href="./update-users.php?id=<?= $row['id'] ?>">Editar</a>
+                <td class="tdbtn">
+                    <a class="btn btn-primary" href="./update-users.php?id=<?= $row['id'] ?>">Editar</a>
                 </td>
-                <td>
-                    <a class="btn btn-danger text-white" href="./delete-users.php?id=<?= $row['id'] ?>">Deletar</a>
+                <td class="tdbtn">
+                    <a class="btn btn-danger" href="./delete-users.php?id=<?= $row['id'] ?>">Deletar</a>
                 </td>
             </tr>
         <?php endforeach; ?>
