@@ -16,6 +16,7 @@
 	padding: 5px;
 	text-align: center;
 	max-width: 200px;
+	border-radius: 3px;
 
 }
 
@@ -38,6 +39,7 @@
 
 .btn-danger {
 	background: #ec6f77;
+	margin-left: -5px;
 }
 .btn-danger:hover {
 	background: #c45c63;
