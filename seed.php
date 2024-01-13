@@ -15,9 +15,9 @@ $users = [];
 	$result = mysqli_query($conn, $sql);
 
 	$result_check = mysqli_num_rows($result);
-	echo ($result_check);
+
 	if ($result_check > 30) {
-		return false;
+		return header("Location: ./list-users.php?");
 	} else {
 	for ($i = 0; $i < 50; $i++) {
 		$user = new User("Financeiro" . $i, "Leader" . $i, "leader" . $i . "@leader.com", "21999988" . $i, "2000-01-01 00:00:00");
@@ -25,4 +25,7 @@ $users = [];
 		$user->__destruct();
 	}
 	mysqli_close($conn);
+
 }
+return header("Location: ./list-users.php?");
+?>

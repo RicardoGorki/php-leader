@@ -12,12 +12,12 @@
 		<nav>
 			<ul class="menu">
 				<li><a>Colaborador</a>
-					<ul>
 						<li><a href="register-users.php">Cadastrar</a></li>
 						<li><a href="list-users.php">Listar</a></li>
 						<li><a href="update-users.php">Atualizar</a></li>
 						<li><a href="delete-users.php">Deleter</a></li>
-					</ul>
+						<li><a href="seed.php">Seed</a></li>
+					</li>
 				</li>
 			</ul>
 		</nav>

@@ -12,7 +12,7 @@
 			?>
 	</div>
 	<section>
-	<?php include 'src/database/seed.php'; ?>
+
 	</section>
 </body>
 
