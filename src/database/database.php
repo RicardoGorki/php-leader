@@ -38,14 +38,16 @@ function readUserDb($conn)
 
 function updateUserDb($conn, $id, $name, $lastName, $email, $phone, $birthDay)
 {
-	if ($id && $name && $email && $phone) {
-		$sql = "UPDATE users SET name = ?, email = ?, phone = ? WHERE id = ?";
+	if ($id && $name && $lastName && $email && $phone && $birthDay) {
+		$sql = "UPDATE users SET name = ?, last_name = ?, email = ?, phone_numbers = ?, birth_day = ? WHERE id = ?";
 		$stmt = mysqli_stmt_init($conn);
 
 		if (!mysqli_stmt_prepare($stmt, $sql))
 			exit('SQL error');
 
-		mysqli_stmt_bind_param($stmt, 'ssssss', $name, $lastName, $email, $phone, $birthDay, $id);
+		$newDate = strtotime($birthDay);
+		$formatedBirthDay = date('Y-m-d H:i:s', $newDate);
+		mysqli_stmt_bind_param($stmt, 'ssssss', $name, $lastName, $email, $phone, $formatedBirthDay, $id);
 		mysqli_stmt_execute($stmt);
 		mysqli_close($conn);
 		return true;

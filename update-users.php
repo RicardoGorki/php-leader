@@ -5,16 +5,20 @@ require_once 'src/services/users.php';
 include 'src/components/header.php';
 include 'src/components/footer.php';
 
-if (isset($_POST["id"], $_POST["name"]) && isset($_POST["last_name"]) && isset($_POST["email"]) && isset($_POST["phone_numbers"]) && isset($_POST["birth_day"]))
-	updateUserAction($conn, $_POST["id"], $_POST["name"], $_POST["last_name"], $_POST["email"], $_POST["phone"], $_POST["birth_day"]);
-
 $user = findUserAction($conn, $_GET['id']);
-
 ?>
-<link rel="stylesheet" href="src/styles/styles-register.css">
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="src/styles/styles-register.css">
+</head>
+<body>
 <div class="container">
 	<div class="form-div">
-		<form class="form" action="../../pages/user/edit.php" method="POST">
+		<form class="form" action="action-update-users.php" method="POST">
 			<input type="hidden" name="id" value="<?= $user['id'] ?>" required />
 			<label>Nome:</label>
 			<input type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>" required />
@@ -31,6 +35,7 @@ $user = findUserAction($conn, $_GET['id']);
 			<input id="submit-update" type="submit" value="Salvar" />
 			</div>
 		</form>
-
 	</div>
 </div>
+</body>
+</html>
