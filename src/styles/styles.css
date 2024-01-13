@@ -78,6 +78,7 @@ body {
 body,
 input,
 button {
+	font-size: 14px;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 400;
 }
