@@ -15,8 +15,8 @@
 	<link rel="stylesheet" href="src/styles/styles.css">
 </head>
 <body>
-		<?php include 'src/components/header.php';
-			include 'src/components/footer.php';
+		<?php require_once 'src/components/header.php';
+			require_once 'src/components/footer.php';
 		?>
 	<section>
 

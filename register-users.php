@@ -9,8 +9,8 @@
 
 <body>
 	<div>
-	<?php include 'src/components/header.php';
-			include 'src/components/footer.php';
+	<?php require_once 'src/components/header.php';
+			require_once 'src/components/footer.php';
 			?>
 	</div>
 	<section class="container">

@@ -9,8 +9,8 @@ $users = readUserAction($conn);
 ?>
 <link rel="stylesheet" href="src/styles/styles-list-users.css">
 <div class="container">
-    <?php include 'src/components/header.php';
-    include 'src/components/footer.php';
+    <?php require_once 'src/components/header.php';
+    require_once 'src/components/footer.php';
     ?>
     <table class="table-users">
         <tr>

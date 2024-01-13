@@ -10,8 +10,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 	<title>Leader-Test</title>
 </head>
-<?php include 'src/components/header.php';
-			include 'src/components/footer.php';
+<?php require_once 'src/components/header.php';
+			require_once 'src/components/footer.php';
 			?>
 
 <body>

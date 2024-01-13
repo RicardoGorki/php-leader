@@ -1,5 +1,5 @@
 <?php
-require("src/entities/User.php");
+require_once("src/entities/User.php");
 
 
 $name = $_POST['name'];

@@ -2,8 +2,8 @@
 
 require_once 'src/database/database.php';
 require_once 'src/services/users.php';
-include 'src/components/header.php';
-include 'src/components/footer.php';
+require_once 'src/components/header.php';
+require_once 'src/components/footer.php';
 
 $user = findUserAction($conn, $_GET['id']);
 ?>
