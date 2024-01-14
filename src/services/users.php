@@ -35,3 +35,11 @@ function deleteUserAction($conn, $id)
 	$message = $deleteUserDb == 1 ? 'success-remove' : 'error-remove';
 	return header("Location: ./list-users.php?message=$message");
 }
+
+function deleteAllUserAction($conn)
+{
+	$deleteAllUserDb = deleteAllUserDb($conn);
+	$message = $deleteAllUserDb == 1 ? 'success-remove' : 'error-remove';
+	return header("Location: ./list-users.php?message=$message");
+}
+

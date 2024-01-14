@@ -17,6 +17,7 @@
 						<li><a href="register-users.php">Cadastrar</a></li>
 						<li><a href="list-users.php">Listar</a></li>
 						<li><a href="seed.php">Seed</a></li>
+						<li><a href="delete-all.php">Apagar Tudo</a></li>
 			</ul>
 		</nav>
 	</header>

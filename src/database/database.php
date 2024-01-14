@@ -98,3 +98,14 @@ function deleteUserDb($conn, $id)
 		return true;
 	}
 }
+
+function deleteAllUserDb($conn)
+{
+		$sql = "DELETE FROM users";
+		$stmt = mysqli_stmt_init($conn);
+
+		if (!mysqli_stmt_prepare($stmt, $sql))
+			exit('SQL error');
+		mysqli_stmt_execute($stmt);
+		return true;
+}
