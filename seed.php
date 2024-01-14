@@ -20,7 +20,7 @@ $users = [];
 		return header("Location: ./list-users.php?");
 	} else {
 	for ($i = 0; $i < 50; $i++) {
-		$user = new User("Financeiro" . $i, "Leader" . $i, "leader" . $i . "@leader.com", "21999988" . $i, "2000-01-01 00:00:00");
+		$user = new User("Leader" . $i, "Empresarial" . $i, "leader" . $i . "@leader.com", "21999998888", "2015-08-27 00:00:00");
 		$user->createUser($user->getId(), $user->getName(), $user->getLastName(), $user->getEmail(), $user->getPhone(), $user->getBirthDay());
 		$user->__destruct();
 	}

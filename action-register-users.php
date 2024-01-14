@@ -16,7 +16,7 @@ $formatedBirthDay = date('Y-m-d H:i:s', $newDate);
 
 if (isset($user)) {
 	$user->createUser($user->getId(), $user->getName(), $user->getLastName(), $user->getEmail(), $user->getPhone(), $formatedBirthDay);
-	echo "Usuário cadastrado com sucesso!";
+
 }
 
 
