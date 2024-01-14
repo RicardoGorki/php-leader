@@ -51,6 +51,7 @@ if ($intTotalUsers)
 			</tr>
 		<?php endforeach; ?>
 	</table>
+	<?php if($intTotalUsers > 0): ?>
 	<div class="page-container">
 	<a class="btn btn-primary btn-page" href="?page=1">Primeira</a>
 	<?php if($page>1): ?>
@@ -62,4 +63,5 @@ if ($intTotalUsers)
 	<?php endif; ?>
 	<a class="btn btn-primary btn-page" href="?page=<?= $pages ?>">Última</a>
 	<div>
+	<?php endif; ?>
 </div>
