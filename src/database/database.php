@@ -1,6 +1,6 @@
 <?php
 
-function findUserDb($conn, $id)
+function findUserByIdDb($conn, $id)
 {
 	$id = mysqli_real_escape_string($conn, $id);
 
@@ -20,7 +20,7 @@ function findUserDb($conn, $id)
 	return $user;
 }
 
-function readUserDb($conn)
+function readAllUserDb($conn)
 {
 	$users = [];
 
@@ -36,6 +36,33 @@ function readUserDb($conn)
 	return $users;
 }
 
+function readLimitedUserDb($conn, $initial_page, $limit)
+{
+	$users = [];
+
+	$sql = "SELECT * FROM users ORDER BY name LIMIT $initial_page, $limit";
+	$result = mysqli_query($conn, $sql);
+
+	$result_check = mysqli_num_rows($result);
+
+	if ($result_check > 0)
+		$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
+	return $users;
+}
+function readCountAllUserDb($conn)
+{
+	$users = [];
+
+	$sql = "SELECT COUNT(name) FROM users";
+	$result = mysqli_query($conn, $sql);
+	$result_check = mysqli_num_rows($result);
+	if ($result_check > 0)
+		$users = mysqli_fetch_array($result, MYSQLI_ASSOC);;
+	mysqli_close($conn);
+	return $users;
+}
 function updateUserDb($conn, $id, $name, $lastName, $email, $phone, $birthDay)
 {
 	if ($id && $name && $lastName && $email && $phone && $birthDay) {

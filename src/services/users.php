@@ -4,12 +4,22 @@ require_once "src/entities/User.php";
 
 function findUserAction($conn, $id)
 {
-	return findUserDb($conn, $id);
+	return findUserByIdDb($conn, $id);
 }
 
-function readUserAction($conn)
+function readAllUserAction($conn)
 {
-	return readUserDb($conn);
+	return readAllUserDb($conn);
+}
+
+function readCountAllUserAction($conn)
+{
+	return readCountAllUserDb($conn);
+}
+
+function readLimitedUserAction($conn, $initial_page, $limit)
+{
+	return readLimitedUserDb($conn, $initial_page, $limit);
 }
 
 function updateUserAction($conn, $id, $name, $lastName, $email, $phone, $birthDay)
