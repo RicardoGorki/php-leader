@@ -14,16 +14,8 @@ cd /mamp/htdocs
 ````
 
 ## MYSQL
-Install the dependencies and devDependencies and start the server.
-```sh
-sudo apt update && sudo apt upgrade
-sudo apt install mysql-server
-```
->Confirm installation
-```sh
-mysql --version
-```
 >Executar no terminal
+>precisa estar dentro da pasta raiz php-leader para funcionar o source;
 ```sh
 sudo mysql
 create database leader;
