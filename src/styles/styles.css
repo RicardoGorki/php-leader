@@ -107,3 +107,13 @@ button {
 	font-weight: 500;
 	background: #8e9ac9;
 }
+
+.avisos {
+	text-align: center;
+	margin-top: 80px;
+}
+
+.avisos h4 {
+	margin-top: 20px;
+
+}
