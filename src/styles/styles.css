@@ -40,7 +40,7 @@ body {
 	list-style: none;
 	background: #a4aed3;
 	border-radius: 3px;
-	display:inline-block;
+	display: inline-block;
 
 
 }
@@ -116,4 +116,39 @@ button {
 .avisos h4 {
 	margin-top: 20px;
 
+}
+
+.form-delete {
+	display: flex;
+	justify-content: center;
+	margin-top: 350px;
+	width: 100%;
+
+}
+
+.prev-btn {
+	background-color: #b1b4bf;
+	color: white;
+	padding: 10px 10px;
+	margin-top: 5px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+
+.btn-delete {
+background-color: #7ec750;
+color: white;
+padding: 10px 10px;
+margin-top: 5px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+margin-left: 50px;
+}
+
+.div-delete {
+	display : flex;
+	justify-content: center;
 }
