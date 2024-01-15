@@ -35,7 +35,7 @@
 			<input name="phone" id="phone" type="tel" placeholder="Ex: 21999998888" pattern="[0-9]+" minlength="10" maxlength="13" required>
 
 			<label for="birthDay">Data de Nascimento:</label>
-			<input name="birthDay" id="birthDay" type="date" required>
+			<input name="birthDay" id="birthDay" type="date" pattern="-d{1,2}\-\d{2}\-\d{4}" minlength="10" maxlength="10" required>
 
 			<input type="submit" value="Cadastrar">
 		</form>
