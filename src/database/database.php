@@ -3,8 +3,6 @@
 function findUserByIdDb($conn, $id)
 {
 	$id = mysqli_real_escape_string($conn, $id);
-
-
 	$sql = "SELECT * FROM users  WHERE id = ?";
 	$stmt = mysqli_stmt_init($conn);
 
@@ -13,9 +11,7 @@ function findUserByIdDb($conn, $id)
 
 	mysqli_stmt_bind_param($stmt, 's', $id);
 	mysqli_stmt_execute($stmt);
-
 	$user = mysqli_fetch_assoc(mysqli_stmt_get_result($stmt));
-
 	mysqli_close($conn);
 	return $user;
 }
@@ -23,10 +19,8 @@ function findUserByIdDb($conn, $id)
 function readAllUserDb($conn)
 {
 	$users = [];
-
 	$sql = "SELECT * FROM users";
 	$result = mysqli_query($conn, $sql);
-
 	$result_check = mysqli_num_rows($result);
 
 	if ($result_check > 0)
@@ -39,27 +33,25 @@ function readAllUserDb($conn)
 function readLimitedUserDb($conn, $initial_page, $limit)
 {
 	$users = [];
-
 	$sql = "SELECT * FROM users ORDER BY name LIMIT $initial_page, $limit";
 	$result = mysqli_query($conn, $sql);
-
 	$result_check = mysqli_num_rows($result);
 
 	if ($result_check > 0)
 		$users = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
 
 	return $users;
 }
 function readCountAllUserDb($conn)
 {
 	$users = [];
-
 	$sql = "SELECT COUNT(name) FROM users";
 	$result = mysqli_query($conn, $sql);
 	$result_check = mysqli_num_rows($result);
+
 	if ($result_check > 0)
-		$users = mysqli_fetch_array($result, MYSQLI_ASSOC);;
+		$users = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
 	mysqli_close($conn);
 	return $users;
 }
@@ -94,18 +86,18 @@ function deleteUserDb($conn, $id)
 
 		mysqli_stmt_bind_param($stmt, 's', $id);
 		mysqli_stmt_execute($stmt);
-
 		return true;
 	}
 }
 
 function deleteAllUserDb($conn)
 {
-		$sql = "DELETE FROM users";
-		$stmt = mysqli_stmt_init($conn);
+	$sql = "DELETE FROM users";
+	$stmt = mysqli_stmt_init($conn);
 
-		if (!mysqli_stmt_prepare($stmt, $sql))
-			exit('SQL error');
-		mysqli_stmt_execute($stmt);
-		return true;
+	if (!mysqli_stmt_prepare($stmt, $sql))
+		exit('SQL error');
+
+	mysqli_stmt_execute($stmt);
+	return true;
 }

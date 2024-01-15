@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +11,12 @@
 	<a href="index.php">
 		<img id="header-logo" src="src/assets/php-elephant.svg" alt="php">
 	</a>
-		<nav>
-			<ul class="menu">
-						<li><a href="register-users.php">Cadastrar</a></li>
-						<li><a href="list-users.php">Listar</a></li>
-						<li><a href="seed.php">Seed</a></li>
-						<li><a href="delete-all.php">Apagar Tudo</a></li>
-			</ul>
-		</nav>
-	</header>
-
-</html>
+	<nav>
+		<ul class="menu">
+			<li><a href="register-users.php">Cadastrar</a></li>
+			<li><a href="list-users.php">Listar</a></li>
+			<li><a href="seed.php">Seed</a></li>
+			<li><a href="delete-all.php">Apagar Tudo</a></li>
+		</ul>
+	</nav>
+</header>

@@ -14,9 +14,9 @@ if (isset($_POST['id']))
 	<form action="delete-users.php" method="POST">
 		<label>Deseja remover este usuário?</label>
 		<div class="div-delete">
-		<a class="prev-btn" href="list-users.php">Voltar</a>
-		<input type="hidden" name="id" value="<?= $_GET['id'] ?>" required />
-		<button class="btn-delete" type="submit">Deletar</button>
-		<div>
+			<a class="prev-btn" href="list-users.php">Voltar</a>
+			<input type="hidden" name="id" value="<?= $_GET['id'] ?>" required />
+			<button class="btn-delete" type="submit">Deletar</button>
+			<div>
 	</form>
 </div>

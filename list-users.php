@@ -26,17 +26,18 @@ if ($intTotalUsers)
 	require_once 'src/components/footer.php';
 	?>
 	<?php if (isset($_GET["message"])) {
-	$message = $_GET["message"];
-	if ($message == "success-remove"){
-			echo "<div id='popup' class='popup popup-success'>" . "<span>" ."Usuário deletado com sucesso!". "</span>"  ."</div>";
-	} else if ($message == "error-remove"){
-		echo "<div class='popup popup-failed>" . "<span>" ."Falha ao deletar usuário". "</span>"  ."</div>";
-	} else if ($message == "success-update"){
-		echo "<div id='popup' class='popup popup-success'>" . "<span>" ."Usuário editado com sucesso!". "</span>"  ."</div>";
-} else if ($message == "error-update"){
-	echo "<div class='popup popup-failed>" . "<span>" ."Falha ao editar usuário". "</span>"  ."</div>";
-}}
-?>
+		$message = $_GET["message"];
+		if ($message == "success-remove") {
+			echo "<div id='popup' class='popup popup-success'>" . "<span>" . "Usuário deletado com sucesso!" . "</span>"  . "</div>";
+		} else if ($message == "error-remove") {
+			echo "<div class='popup popup-failed>" . "<span>" . "Falha ao deletar usuário" . "</span>"  . "</div>";
+		} else if ($message == "success-update") {
+			echo "<div id='popup' class='popup popup-success'>" . "<span>" . "Usuário editado com sucesso!" . "</span>"  . "</div>";
+		} else if ($message == "error-update") {
+			echo "<div class='popup popup-failed>" . "<span>" . "Falha ao editar usuário" . "</span>"  . "</div>";
+		}
+	}
+	?>
 
 	<table class="table-users">
 		<tr>
@@ -45,7 +46,6 @@ if ($intTotalUsers)
 			<th>Email</th>
 			<th>Telefone</th>
 			<th>Data de Nascimento</th>
-
 		</tr>
 		<?php foreach ($users as $row) : ?>
 			<tr>
@@ -63,18 +63,18 @@ if ($intTotalUsers)
 			</tr>
 		<?php endforeach; ?>
 	</table>
-
-	<?php if($intTotalUsers > 0): ?>
-	<div class="page-container">
-	<a class="btn btn-primary btn-page" href="?page=1">Primeira</a>
-	<?php if($page>1): ?>
-		<a class="btn btn-primary btn-page" href="?page=<?= $page - 1 ?>"> << </a>
-	<?php endif; ?>
-	<?="<p class='btn-page page-p'>".$page."</p>" ?>
-	<?php if($page<$pages): ?>
-		<a class="btn btn-primary btn-page" href="?page=<?= $page + 1 ?>"> >> </a>
-	<?php endif; ?>
-	<a class="btn btn-primary btn-page" href="?page=<?= $pages ?>">Última</a>
-	<div>
-	<?php endif; ?>
-</div>
+	<?php if ($intTotalUsers > 0) : ?>
+		<div class="page-container">
+			<a class="btn btn-primary btn-page" href="?page=1">Primeira</a>
+			<?php if ($page > 1) : ?>
+				<a class="btn btn-primary btn-page" href="?page=<?= $page - 1 ?>">
+					<< </a>
+					<?php endif; ?>
+					<?= "<p class='btn-page page-p'>" . $page . "</p>" ?>
+					<?php if ($page < $pages) : ?>
+						<a class="btn btn-primary btn-page" href="?page=<?= $page + 1 ?>"> >> </a>
+					<?php endif; ?>
+					<a class="btn btn-primary btn-page" href="?page=<?= $pages ?>">Última</a>
+					<div>
+					<?php endif; ?>
+					</div>

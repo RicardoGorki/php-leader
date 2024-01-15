@@ -42,4 +42,3 @@ function deleteAllUserAction($conn)
 	$message = $deleteAllUserDb == 1 ? 'success-remove' : 'error-remove';
 	return header("Location: ./list-users.php?message=$message");
 }
-

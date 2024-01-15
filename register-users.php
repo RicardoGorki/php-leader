@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="src/styles/styles-register.css">
 </head>
-
 <body>
 	<div>
 		<?php require_once 'src/components/header.php';
@@ -42,7 +40,5 @@
 			<input type="submit" value="Cadastrar">
 		</form>
 	</section>
-
 </body>
-
 </html>
