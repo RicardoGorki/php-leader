@@ -23,16 +23,16 @@
 	<section class="container">
 		<form action="action-register-users.php" method="POST">
 			<label for="name">Nome:</label>
-			<input name="name" id="name" type="text" placeholder="Ex: José" required>
+			<input name="name" id="name" type="text" placeholder="Ex: José" minlength="3" maxlength="20" required>
 
 			<label for="lastName">Sobrenome:</label>
-			<input name="lastName" id="lastName" type="text" placeholder="Ex: Manoel" required>
+			<input name="lastName" id="lastName" type="text" placeholder="Ex: Manoel" minlength="3" maxlength="20" required>
 
 			<label for="email">Email:</label>
-			<input name="email" id="email" type="email" placeholder="Ex: johndoe@gmail.com" required>
+			<input name="email" id="email" type="email" placeholder="Ex: johndoe@gmail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"  minlength="6" maxlength="30" required>
 
 			<label for="phone">Telefone:</label>
-			<input name="phone" id="phone" type="tel" placeholder="Ex: 21999998888" required>
+			<input name="phone" id="phone" type="tel" placeholder="Ex: 21999998888" pattern="[0-9]+" minlength="10" maxlength="13" required>
 
 			<label for="birthDay">Data de Nascimento:</label>
 			<input name="birthDay" id="birthDay" type="date" required>

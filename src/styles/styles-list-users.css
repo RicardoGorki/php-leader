@@ -1,6 +1,7 @@
 .table-users {
 	margin: 0 auto;
 	margin-top: 100px;
+	width: 1400px;
 }
 
 th {
@@ -13,9 +14,7 @@ td {
 	border: 1px solid #000;
 	padding: 5px;
 	text-align: center;
-	max-width: 200px;
 	border-radius: 3px;
-
 }
 
 .btn {
@@ -24,21 +23,23 @@ td {
 	display: inline-block;
 	border-radius: 3px;
 	padding: 5px 20px;
-	margin-top: -3px;
-	margin-bottom: -3px;
+
 }
 
 .btn-primary {
 	background: #a4aed3;
+
 }
 
 .btn-primary:hover {
-	background: #8e9ac9
+	background: #8e9ac9;
+
 }
 
 .btn-danger {
 	background: #ec6f77;
-	margin-left: -5px;
+	float:left;
+	margin-left: -10px;
 }
 
 .btn-danger:hover {
