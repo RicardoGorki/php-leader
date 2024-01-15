@@ -62,3 +62,36 @@
 	font-weight: 500;
 	font-size: 16px;
 }
+
+.popup {
+	color: #fff;
+	font-weight: 500;
+  width: 280px;
+  height: 50px;
+  position: relative;
+	text-align: center;
+	padding: 14px 20px;
+	border-radius: 5px;
+	margin-top: 20px;
+	margin-left: auto;
+	animation: popup 0s ease-in 1.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes popup {
+  to {
+    visibility: hidden;
+  }
+}
+
+
+.popup-success {
+	background-color: #6daa48;
+}
+
+.popup-failed {
+	background-color: #c45c63;
+}
+
+
+

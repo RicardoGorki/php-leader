@@ -16,7 +16,8 @@ $formatedBirthDay = date('Y-m-d H:i:s', $newDate);
 
 if (isset($user)) {
 	$user->createUser($user->getId(), $user->getName(), $user->getLastName(), $user->getEmail(), $user->getPhone(), $formatedBirthDay);
-
+	$message = $user == 1 ? 'success-created' : 'error-created';
+	return header("Location: ./register-users.php?message=$message");
 }
 
 

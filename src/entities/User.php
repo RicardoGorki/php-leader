@@ -30,6 +30,7 @@ class User
 			die("Connection failed: " . mysqli_error($conn));
 		}
 		$sql = $conn->query("INSERT INTO users(id, name, last_name, email, phone_numbers, birth_day) VALUES('$id', '$name', '$lastName', '$email', '$phone', '$birthDay')");
+
 		return $sql;
 	}
 		public function getId(): string

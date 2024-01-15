@@ -9,9 +9,18 @@
 
 <body>
 	<div>
-	<?php require_once 'src/components/header.php';
-			require_once 'src/components/footer.php';
-			?>
+		<?php require_once 'src/components/header.php';
+		require_once 'src/components/footer.php';
+		?>
+		<?php if (isset($_GET["message"])) {
+			$message = $_GET["message"];
+			if ($message == "success-created") {
+				echo "<div id='popup' class='popup popup-success'>" . "<span>" . "Usuário cadastrado com sucesso!" . "</span>"  . "</div>";
+			} else if ($message == "error-created") {
+				echo "<div class='popup popup-failed>" . "<span>" . "Falha ao cadastrar usuário" . "</span>"  . "</div>";
+			}
+		}
+		?>
 	</div>
 	<section class="container">
 		<form action="action-register-users.php" method="POST">

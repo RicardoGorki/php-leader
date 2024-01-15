@@ -4,7 +4,6 @@ require_once 'src/database/dbconnect.php';
 require_once "src/database/database.php";
 require_once 'src/entities/User.php';
 
-
 $page = 1;
 
 if (isset($_GET['page']))
@@ -26,6 +25,19 @@ if ($intTotalUsers)
 	<?php require_once 'src/components/header.php';
 	require_once 'src/components/footer.php';
 	?>
+	<?php if (isset($_GET["message"])) {
+	$message = $_GET["message"];
+	if ($message == "success-remove"){
+			echo "<div id='popup' class='popup popup-success'>" . "<span>" ."Usuário deletado com sucesso!". "</span>"  ."</div>";
+	} else if ($message == "error-remove"){
+		echo "<div class='popup popup-failed>" . "<span>" ."Falha ao deletar usuário". "</span>"  ."</div>";
+	} else if ($message == "success-update"){
+		echo "<div id='popup' class='popup popup-success'>" . "<span>" ."Usuário editado com sucesso!". "</span>"  ."</div>";
+} else if ($message == "error-update"){
+	echo "<div class='popup popup-failed>" . "<span>" ."Falha ao editar usuário". "</span>"  ."</div>";
+}}
+?>
+
 	<table class="table-users">
 		<tr>
 			<th>Nome</th>
@@ -51,6 +63,7 @@ if ($intTotalUsers)
 			</tr>
 		<?php endforeach; ?>
 	</table>
+
 	<?php if($intTotalUsers > 0): ?>
 	<div class="page-container">
 	<a class="btn btn-primary btn-page" href="?page=1">Primeira</a>
